@@ -1,4 +1,4 @@
-BusinessYear,Nat_Participation_Rate,Nat_Employment_Level,Nat_Unemployment_Rate
-2024,62.59166666666667,161348.0,4.0249999999999995
-2025,62.44166666666666,163564.41666666666,4.279166666666667
-2026,62.5,164520.0,4.3
+BusinessYear,Nat_Participation_Rate,Nat_Employment_Level_(Millions),Nat_Unemployment_Rate
+2024,62.59,161.35,4.02
+2025,62.44,163.56,4.28
+2026,62.5,164.52,4.3
