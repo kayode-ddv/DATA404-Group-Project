@@ -52,6 +52,10 @@ insurer['following_year'] = insurer.groupby(['IssuerId', 'Location'])['BusinessY
 
 insurer['exited_following_year'] = np.where((insurer['following_year'].isnull()) | (insurer['following_year'] != insurer['BusinessYear'] +1),1,0)
 
+last_data_yr = insurer['BusinessYear'].max()
+insurer.loc[insurer['BusinessYear'] == last_data_yr, 'exited_following_year'] = np.nan
+insurer.loc[insurer['BusinessYear'] == 2025, 'exited_following_year'] = np.nan
+
 unknown_exit = df['BusinessYear'].max()
 insurer.loc[insurer['BusinessYear'] == unknown_exit, 'exited_following_year'] = np.nan
 
@@ -127,7 +131,7 @@ print("Logistic Regression:")
 print(classification_report(y_test, y_pred_log_reg))
 
 #OBSERVATIONS
-#when models predicted an exit, they were right more than half of the time
-#rf model predicted .47 of total exits
-#market share was the feature with most importance on the predictions
-#rf performed better than log regression at finiding market exits
+#rf model predicted 88% of true market exits despite low precision
+#market share top predictor at 34%, price gap and number of plans are close at second and third
+#rf outperformed log regression, with 65% accuracy compared to 42%.
+#ROC-AUC score .77
