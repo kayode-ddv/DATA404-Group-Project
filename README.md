@@ -4,3 +4,24 @@ If an appropriately named subdirectory is not available feel free to add one, or
   -  All python code needs to go under the general "Code" directory. Currently the "Code" subdirectories are "Analysis", "Data Acquisition", "Preprocessing", and "Visualization".
 
   -  All data needs to go under the "Data" directory. Currently the "Data" subdirectories are "Raw", "Preprocessed", and "Finalized".
+
+
+## Visualization Outputs
+
+This project includes Python-based visualizations of ACA marketplace instability risk.
+
+The following outputs were generated:
+
+- Risk Map (interactive HTML)
+- Top 10 High-Risk States (bar chart)
+- Risk Trend Over Time (line chart)
+- Feature Importance (model interpretation)
+- Confusion Matrix (model performance)
+
+All visualization files are located in:
+
+Code/Visualization/
+
+The final dataset used for Tableau dashboard development is located in:
+
+Data/Finalized/aca_marketplace_risk_final.csv
